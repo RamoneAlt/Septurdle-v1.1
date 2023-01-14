@@ -1,0 +1,602 @@
+body {
+    text-transform: uppercase;
+    font-family:Ranade,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    text-align: center;
+    background-color: rgb(82, 74, 74);
+    cursor:auto;
+    text-shadow: black -1px 1px;
+    
+}
+
+
+.dark-mode {
+
+background-color: whitesmoke;
+color: black;
+text-shadow: rgb(226, 221, 221) -1px 1px;
+
+}
+
+
+
+
+h1 {
+
+color: whitesmoke;
+text-shadow: rgb(187, 15, 15) -2.5px 2.5px;
+size: 24px;
+letter-spacing: 2px;
+
+}
+
+.dark-mode h1 {
+
+  color: black;
+text-shadow: rgb(187, 15, 15) -2.5px 2.5px;
+size: 24px;
+letter-spacing: 2px;
+
+}
+
+
+
+hr {
+    width: 500px;
+    background-color: white;
+    
+}
+
+
+
+
+.title{
+    font-size: 25px;
+    text-shadow: black -2.75px 2.75px;
+    color: whitesmoke;
+    font-weight: bold;
+    letter-spacing: 17px;
+    
+}
+
+
+
+.dark-mode .title{
+
+color:black;
+text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
+
+}
+
+
+#board {
+    width: 500px;
+    height: 430px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    /* Box */
+    border: 2px solid #cfd7db;
+    width: 60px;
+    height: 55px;
+    margin: 3px;
+    border-radius: 25%;
+    box-shadow: whitesmoke -2.5px 2.5px;
+
+    /* Text */
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dark-mode .tile {
+    /* Box */
+    border: 2px solid rgb(34, 32, 32);
+    width: 60px;
+    height: 55px;
+    margin: 3px;
+    border-radius: 25%;
+    box-shadow: black -2.5px 2.5px;
+
+    /* Text */
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+.correct {
+    background-color: #6AAA64;
+    color: whitesmoke;
+    border-color: white;
+    text-shadow: green -1px 1px;
+}
+
+.present {
+    background-color: #C9B458;
+    color: whitesmoke;
+    border-color: white;
+}
+
+.absent {
+    background-color: #787C7E; 
+    color: whitesmoke;
+    border-color:white;
+    
+}
+
+
+.colorblind .correct {
+    background-color: blue;
+    color: whitesmoke;
+    border-color: white;
+}
+
+.colorblind .present {
+    background-color: rgb(136, 184, 41);
+    color: whitesmoke;
+    border-color: white;
+}
+
+.colorblind .absent {
+    background-color: #787C7E;
+    color: whitesmoke;
+    border-color:white;
+    
+}
+
+
+
+.keyboard-row {
+    width: 400px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+      cursor:pointer;
+}
+
+.key-tile {
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+      cursor:pointer;
+    
+
+    /* Text */
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+
+.dark-mode .key-tile {
+     width: 36px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid rgb(86, 74, 74);
+    text-shadow: whitesmoke -1px 1px;
+      cursor:pointer;
+    
+
+    /* Text */
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+
+.enter-key-tile {
+    width: 76px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+      cursor:pointer;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.a-key-tile {
+    width: 56px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+      cursor:pointer;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.l-key-tile {
+    width: 56px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+      cursor:pointer;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+
+.dark-mode .enter-key-tile {
+    width: 76px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid rgb(86, 74, 74);
+    text-shadow: whitesmoke -1px 1px;
+       cursor:pointer;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
+.dark-mode .a-key-tile {
+    width: 56px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid rgb(86, 74, 74);
+    text-shadow: whitesmoke -1px 1px;
+       cursor:pointer;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
+.dark-mode .l-key-tile {
+    width: 56px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid rgb(86, 74, 74);
+    text-shadow: whitesmoke -1px 1px;
+       cursor:pointer;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
+
+
+.dark-mode .button {
+
+  padding: 20px 20px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.9s;
+  cursor: pointer;
+}
+
+.dark-mode .button1 {
+  background-color: black; 
+  color: white;
+    cursor:pointer;
+ 
+}
+
+.dark-mode .button1:hover {
+  background-color: grey;
+  color: white;
+    cursor:pointer;
+}
+
+
+
+
+.button {
+
+  padding: 20px 20px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.9s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+    cursor:pointer;
+}
+
+.button1:hover {
+  background-color: black;
+  color: white;
+    cursor:pointer;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+    cursor:pointer;
+}
+
+.button2:hover {
+  background-color: black;
+  color: white;
+    cursor:pointer;
+}
+
+
+
+.top-bar .title {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f2f2f2;
+  float: center;
+}
+
+
+
+.dark-mode .top-bar .title {
+  display: block;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+
+
+.top-bar {
+  background-color: rgb(86, 74, 74);
+  font-family: Arial;
+  overflow: hidden;
+  position: sticky;    
+  top: 0;
+    
+}
+
+
+
+.dark-mode .top-bar {
+  background-color: whitesmoke;
+  position: sticky;    
+  top: 0;
+    
+}
+
+
+
+
+
+
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  backdrop-filter: blur(9px);
+
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: 20px;
+  height: 75%;
+}
+
+.dark-mode .modal-content {
+  background-color: rgb(86, 74, 74);
+  margin: auto;
+  padding: 20px;
+  width: 30%;
+  border-radius: 20px;
+  height: 75%;
+}
+
+
+
+
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+/* The Close Button */
+.dark-mode .close {
+  color: whitesmoke;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.dark-mode .close:hover,
+.dark-mode .close:focus {
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.btmodal {
+float: left;
+background-color: rgb(82, 74, 74);
+border-color: rgb(82, 74, 74);
+   cursor:pointer;
+}
+
+
+.btinfo {
+
+float: right;
+   cursor:pointer;
+   visibility: hidden;
+ 
+
+}
+
+
+.h3 {
+
+size: 25px;
+color: black;
+text-shadow: rgb(167, 162, 162) -2.5px 2.5px;
+
+}
+
+.dark-mode .h3 {
+
+  color: whitesmoke;
+  text-shadow: black -2.5px 2.5px;
+
+}
+
+.h2 {
+
+size: 32px;
+color: black;
+text-shadow: rgb(167, 162, 162) -2.5px 2.5px;
+text-decoration: underline;
+text-decoration-color: rgb(167,162,162);
+
+}
+
+.dark-mode .h2 {
+
+  color: whitesmoke;
+  text-shadow: black -2.5px 2.5px;
+  text-decoration: underline;
+  text-decoration-color: white;
+
+}
+
+
+
+
+
+
+
+
+.colorblind .green {
+background-color: blue;
+  width: 40px;
+   height: 40px;
+  
+}
+
+.colorblind .yellow {
+background-color: rgb(136, 184, 41);
+    width: 40px;
+   height: 40px;
+
+}
+
+.colorblind .grey {
+background-color: #787C7E;
+   width: 40px;
+   height: 40px;
+ 
+}
+
+.green {
+background-color: #6AAA64;
+ width: 40px;
+   height: 40px;
+
+}
+.yellow {
+background-color: #C9B458;
+   width: 40px;
+   height: 40px;
+
+}
+
+.grey {
+background-color: #787C7E;
+width: 40px;
+height: 40px;    
+  
+}
+
+.ppsmall {
+  font-size: 18px;
+}
