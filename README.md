@@ -6,3 +6,5 @@ Yellow = Letter in word, not in the right spot;
 Green = Correct letter in the correct spot;  
 
 Pretty simple rules of course, enjoy! :D
+
+(to run, open the "septurdlecombined" document!)
