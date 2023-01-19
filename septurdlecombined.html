@@ -104,11 +104,33 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     border-color: white;
 }
 .absent {
-    background-color: #080808; 
+    background-color: #787C7E; 
     color: whitesmoke;
     border-color:white;
     
 }
+            
+.keycorrect {
+    background-color: #6AAA64;
+    color: whitesmoke;
+    border-color: white;
+    text-shadow: green -1px 1px;
+}
+.keypresent {
+    background-color: #C9B458;
+    color: whitesmoke;
+    border-color: white;
+}
+.keyabsent {
+    background-color: #021e30; 
+    color: whitesmoke;
+    border-color:white; 
+}        
+            
+            
+            
+            
+            
 .colorblind .correct {
     background-color: blue;
     color: whitesmoke;
@@ -739,8 +761,8 @@ function update() {
             currTile.classList.add("correct");
 
             let keyTile = document.getElementById("Key" + letter);
-            keyTile.classList.remove("present");
-            keyTile.classList.add("correct");
+            keyTile.classList.remove("keypresent");
+            keyTile.classList.add("keycorrect");
 
             correct += 1;
             letterCount[letter] -= 1; //deduct the letter count
@@ -764,8 +786,8 @@ function update() {
                 currTile.classList.add("present");
                 
                 let keyTile = document.getElementById("Key" + letter);
-                if (!keyTile.classList.contains("correct")) {
-                    keyTile.classList.add("present");
+                if (!keyTile.classList.contains("keycorrect")) {
+                    keyTile.classList.add("keypresent");
                 }
                 letterCount[letter] -= 1;
             } // Not in the word or (was in word but letters all used up to avoid overcount)
