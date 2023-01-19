@@ -163,7 +163,7 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     margin: 1px;
     border: 1px solid lightgray;
       cursor:pointer;
-    background-color: #0a1f47;
+
    
     
     /* Text */
@@ -716,14 +716,14 @@ function update() {
     let guess = "";
     document.getElementById("answer").innerText = "";
 
-    //string up the guesses into the word
+    //string up  guesses into the word o.o
     for (let c = 0; c < width; c++) {
         let currTile = document.getElementById(row.toString() + '-' + c.toString());
         let letter = currTile.innerText;
         guess += letter;
     }
 
-    guess = guess.toLowerCase(); //case sensitive
+    guess = guess.toLowerCase(); 
     console.log(guess);
 
     if (!guessList.includes(guess)) {
@@ -736,7 +736,7 @@ function update() {
     }
     
     
-    //start processing guess
+       //start processing guess
     let correct = 0;
 
     let letterCount = {}; //keep track of letter frequency, ex) PIZZAZZ -> {P:1, I:1, Z:4, A: 1}
@@ -796,7 +796,7 @@ function update() {
             else {
                 currTile.classList.add("absent");
                 let keyTile = document.getElementById("Key" + letter);
-                keyTile.classList.add("absent")
+                keyTile.classList.add("keyabsent")
             }
         }
     }
