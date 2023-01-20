@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title>Septurdle</title> 
@@ -116,16 +115,59 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     color: whitesmoke;
     border-color: white;
     text-shadow: green -1px 1px;
+      width: 36px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid #6AAA64;
+    border-radius: 4px;
+      cursor:pointer;
+    
+        /* Text */
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
 }
 .keypresent {
     background-color: #C9B458;
     color: whitesmoke;
     border-color: white;
+      width: 36px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid #baa650;
+    border-radius: 4px;
+   
+      cursor:pointer;
+    
+        /* Text */
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
 }
 .keyabsent {
-    background-color:  #3a3a3c; <!--#021e30-->
+    background-color:  #3a3a3c; 
     color: whitesmoke;
     border-color:white; 
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid #3a3a3c;
+    border-radius: 4px;
+      cursor:pointer;
+    
+        /* Text */
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
 }        
             
             
@@ -155,20 +197,21 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     flex-wrap: wrap;
     align-self: center;
       cursor:pointer;
-   
 }
+
+
+
+
 .key-tile {
     width: 36px;
     height: 40px;
     margin: 1px;
     border: 1px solid #818384;
     border-radius: 4px;
+    background-color: #818384;
     
       cursor:pointer;
-   background-color: #818384; <!--#3a3a3c-->
-
-   
-    
+      
     /* Text */
     font-size: 22px;
     font-weight: bold;
@@ -177,6 +220,40 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     align-items: center;
     color: whitesmoke;
 }
+
+.enter-key-tile {
+    width: 76px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgrey;
+      cursor:pointer;
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.thick-key-tile {
+    width: 56px;
+    height: 40px;
+    margin: 1px;
+    border: 0px solid #818384;
+    border-radius: 4px;
+      cursor:pointer;
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+
+
+
 .dark-mode .key-tile {
      width: 36px;
     height: 40px;
@@ -193,48 +270,8 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     align-items: center;
     color: black;
 }
-.enter-key-tile {
-    width: 76px;
-    height: 40px;
-    margin: 1px;
-    border: 1px solid lightgray;
-      cursor:pointer;
-    /* Text */
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-}
-.a-key-tile {
-    width: 56px;
-    height: 40px;
-    margin: 1px;
-    border: 1px solid lightgray;
-      cursor:pointer;
-    /* Text */
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-}
-.l-key-tile {
-    width: 56px;
-    height: 40px;
-    margin: 1px;
-    border: 1px solid lightgray;
-      cursor:pointer;
-    /* Text */
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-}
+
+
 .dark-mode .enter-key-tile {
     width: 76px;
     height: 40px;
@@ -648,20 +685,21 @@ function intialize() {
             keyTile.addEventListener("click", processKey);
             
             if (key == "L") {
-                keyTile.classList.add("l-key-tile");
+                keyTile.classList.add("thick-key-tile");
             } else {
                 keyTile.classList.add("key-tile");
             }
             if (key == "A") {
-                keyTile.classList.add("a-key-tile");
+                keyTile.classList.add("thick-key-tile");
             } else {
                 keyTile.classList.add("key-tile");
             }
-            if (key == "Enter") {
+             if (key == "Enter") {
                 keyTile.classList.add("enter-key-tile");
             } else {
                 keyTile.classList.add("key-tile");
             }
+         
             keyboardRow.appendChild(keyTile);
         }
         document.body.appendChild(keyboardRow);
@@ -767,6 +805,7 @@ function update() {
 
             let keyTile = document.getElementById("Key" + letter);
             keyTile.classList.remove("keypresent");
+             keyTile.classList.remove("key-tile"); //change back bhere<<
             keyTile.classList.add("keycorrect");
 
             correct += 1;
@@ -792,6 +831,7 @@ function update() {
                 
                 let keyTile = document.getElementById("Key" + letter);
                 if (!keyTile.classList.contains("keycorrect")) {
+										keyTile.classList.remove("key-tile");
                     keyTile.classList.add("keypresent");
                 }
                 letterCount[letter] -= 1;
@@ -799,6 +839,7 @@ function update() {
             else {
                 currTile.classList.add("absent");
                 let keyTile = document.getElementById("Key" + letter);
+								keyTile.classList.remove("key-tile")
                 keyTile.classList.add("keyabsent")
             }
         }
