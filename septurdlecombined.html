@@ -849,11 +849,11 @@ function update() {
                 
                 let keyTile = document.getElementById("Key" + letter);
                 if (!keyTile.classList.contains("keycorrect")) {
-										keyTile.classList.remove("key-tile");
+		    keyTile.classList.remove("key-tile");
                     keyTile.classList.add("keypresent");
                 }
                 letterCount[letter] -= 1;
-            } // Not in the word or (was in word but letters all used up to avoid overcount)
+            }	 // not in the word or (was in word but letters all used up to avoid overcount)
             else {
                 currTile.classList.add("absent");
                 let keyTile = document.getElementById("Key" + letter);
