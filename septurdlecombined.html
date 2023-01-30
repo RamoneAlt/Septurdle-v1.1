@@ -4,10 +4,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="https://live.staticflickr.com/65535/52626663271_158b9afe43_m.jpg" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-
-         <!-- combined version -->
         <style>
-            
 body {
     text-transform: uppercase;
     font-family:Ranade,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
@@ -17,19 +14,8 @@ body {
     text-shadow: black -1px 1px;
     
 }
-.dark-mode {
-background-color: whitesmoke;
-color: black;
-text-shadow: rgb(226, 221, 221) -1px 1px;
-}
 h1 {
 color: whitesmoke;
-text-shadow: rgb(187, 15, 15) -2.5px 2.5px;
-size: 24px;
-letter-spacing: 2px;
-}
-.dark-mode h1 {
-  color: black;
 text-shadow: rgb(187, 15, 15) -2.5px 2.5px;
 size: 24px;
 letter-spacing: 2px;
@@ -46,10 +32,6 @@ hr {
     font-weight: bold;
     letter-spacing: 17px;
     
-}
-.dark-mode .title{
-color:black;
-text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
 }
 #board {
     width: 500px;
@@ -70,22 +52,6 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
  
     /* Text */
     color: whitesmoke;
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.dark-mode .tile {
-    /* Box */
-    border: 2px solid rgb(34, 32, 32);
-    width: 60px;
-    height: 55px;
-    margin: 3px;
-    border-radius: 25%;
-    box-shadow: black -2.5px 2.5px;
-    /* Text */
-    color: black;
     font-size: 24px;
     font-weight: bold;
     display: flex;
@@ -131,7 +97,7 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     color: whitesmoke;
 }
 .keypresent {
-    background-color: #C9B458;
+    background-color: #C9B458; !important;
     color: whitesmoke;
     border-color: white;
       width: 36px;
@@ -187,11 +153,7 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     border-color:white;
     
 }
-            
-            
-            
-            
-            
+ 
 .colorblind .correct {
     background-color: blue;
     color: whitesmoke;
@@ -216,9 +178,6 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     align-self: center;
       cursor:pointer;
 }
-
-
-
 
 .key-tile {
     width: 36px;
@@ -268,92 +227,6 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
     align-items: center;
     color:white;
 }
-
-
-
-
-.dark-mode .key-tile {
-     width: 36px;
-    height: 40px;
-    margin: 1px;
-    border: 1px solid rgb(86, 74, 74);
-    text-shadow: whitesmoke -1px 1px;
-      cursor:pointer;
-    
-    /* Text */
-    font-size: 22px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-}
-
-
-.dark-mode .enter-key-tile {
-    width: 76px;
-    height: 40px;
-    margin: 1px;
-    border: 1px solid rgb(86, 74, 74);
-    text-shadow: whitesmoke -1px 1px;
-       cursor:pointer;
-    /* Text */
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:black;
-}
-.dark-mode .a-key-tile {
-    width: 56px;
-    height: 40px;
-    margin: 1px;
-    border: 1px solid rgb(86, 74, 74);
-    text-shadow: whitesmoke -1px 1px;
-       cursor:pointer;
-    /* Text */
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:black;
-}
-.dark-mode .l-key-tile {
-    width: 56px;
-    height: 40px;
-    margin: 1px;
-    border: 1px solid rgb(86, 74, 74);
-    text-shadow: whitesmoke -1px 1px;
-       cursor:pointer;
-    /* Text */
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:black;
-}
-.dark-mode .button {
-  padding: 20px 20px;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.9s;
-  cursor: pointer;
-}
-.dark-mode .button1 {
-  background-color: black; 
-  color: white;
-    cursor:pointer;
- 
-}
-.dark-mode .button1:hover {
-  background-color: grey;
-  color: white;
-    cursor:pointer;
-}
 .button {
   padding: 20px 20px;
   display: inline-block;
@@ -393,26 +266,10 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
   color: whitesmoke;
   float: center;
 }
-.dark-mode .top-bar .title {
-  display: block;
-  text-align: center;
-  padding: 14px 14px;
-  text-decoration: none;
-  letter-spacing: 4px;
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-}
 .top-bar {
   background-color: #020a17;
   font-family: Arial;
   overflow: hidden;
-  position: sticky;    
-  top: 0;
-    
-}
-.dark-mode .top-bar {
-  background-color: whitesmoke;
   position: sticky;    
   top: 0;
     
@@ -440,14 +297,7 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
   border-radius: 20px;
   height: 75%;
 }
-.dark-mode .modal-content {
-  background-color: rgb(86, 74, 74);
-  margin: auto;
-  padding: 20px;
-  width: 30%;
-  border-radius: 20px;
-  height: 75%;
-}
+
 /* The Close Button */
 .close {
   color: #aaaaaa;
@@ -455,22 +305,10 @@ text-shadow: rgb(226, 221, 221) -2.75px 2.75px;
   font-size: 28px;
   font-weight: bold;
 }
-/* The Close Button */
-.dark-mode .close {
-  color: whitesmoke;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+
 .close:hover,
 .close:focus {
   color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-.dark-mode .close:hover,
-.dark-mode .close:focus {
-  color: whitesmoke;
   text-decoration: none;
   cursor: pointer;
 }
